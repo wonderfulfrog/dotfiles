@@ -9,17 +9,13 @@ set noerrorbells
 set belloff=all
 set hlsearch
 set incsearch
-set wildcharm=<Tab>
 set signcolumn=yes
 set hidden
 set nobackup
 set nowritebackup
 set cmdheight=2
-set updatetime=300
 set shortmess+=c
-set wildmenu
 set path=$PWD/**
-set wildignore+=**/.git/**,**/__pycache__/**,**/venv/**,**/node_modules/**,**/dist/**,**/build/**,*.o,*.pyc,*.swp
 set showmode
 set ignorecase
 set relativenumber
@@ -77,6 +73,9 @@ Plug 'Rigellute/rigel'
 
 call plug#end()
 
+" netrw
+let g:netrw_banner = 0
+
 " BEGIN auto-pairs
 let g:AutoPairsMultilineClose = 0
 " END auto-pairs
@@ -98,9 +97,6 @@ endif
 
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
-" Select highlighted option with <Tab>.
-" inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
-
 " Use <Tab> and <S-Tab> to navigate autocomplete list.
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -114,11 +110,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 " END CoC
 
 " BEGIN coc-prettier
@@ -129,11 +120,10 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Ignores files in .gitignore but includes untracked files.
 " Reference: https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
 nnoremap <silent> <c-p> :GFiles --cached --others --exclude-standard<cr>
-nnoremap <c-s-f> :Ag<space>
 "END fzf
 
 " Theme
-set statusline=%f%=%m%r%h%w[%L]%y[%04l,%04v]
+set statusline=%f%=%m%r%h%w%y[%04l,%04v]
 set termguicolors
 syntax enable
 colorscheme rigel
