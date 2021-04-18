@@ -1,0 +1,7 @@
+{
+  "suggest.noselect": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": ["markdown", "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.jumpCommand": "vsplit"
+}

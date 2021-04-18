@@ -1,0 +1,6 @@
+[user]
+	email = devinwl@users.noreply.github.com
+	name = Devin Lumley
+[core]
+	editor = nvim
+	excludesfile = /Users/devin/.gitignore
