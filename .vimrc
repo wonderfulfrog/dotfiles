@@ -58,16 +58,14 @@ nnoremap <C-H> <C-W><C-H>
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-Plug 'devinwl/vim-mdx-js'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
 
 Plug 'Rigellute/rigel'
 
