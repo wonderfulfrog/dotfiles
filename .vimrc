@@ -118,6 +118,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Ignores files in .gitignore but includes untracked files.
 " Reference: https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
 nnoremap <silent> <c-p> :GFiles --cached --others --exclude-standard<cr>
+nnoremap <c-s-f> :Ag<space>
 "END fzf
 
 " Theme
