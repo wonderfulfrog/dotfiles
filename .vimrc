@@ -38,6 +38,9 @@ set cursorline
 autocmd FileType gitcommit setlocal spell
 autocmd FileType markdown,md,mdx setlocal spell
 
+" Line wrap when writing
+autocmd FileType markdown,md,mdx,text set wrap
+
 " Drill Sergeant Demchuk
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -118,7 +121,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Ignores files in .gitignore but includes untracked files.
 " Reference: https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
 nnoremap <silent> <c-p> :GFiles --cached --others --exclude-standard<cr>
-nnoremap <c-s-f> :Ag<space>
+nnoremap <c-f> :Ag<space>
 "END fzf
 
 " Theme
