@@ -12,6 +12,8 @@ local lsp_filetypes = {
     -- "lua",
 }
 
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
 -- Give floating windows borders
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 
@@ -23,7 +25,8 @@ vim.diagnostic.config({
         -- Prepend with diagnostic source if there is more than one attached to the buffer
         -- (e.g. (eslint) Error: blah blah blah)
         source = "if_many",
-        signs = false,
+        spacing = 4,
+        prefix = "●",
     },
     float = {
         severity_sort = true,
@@ -280,6 +283,11 @@ lspconfig.yamlls.setup({
 -- lspconfig.rust_analyzer.setup({
 --     on_attach = custom_attach,
 -- })
+
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
 
 return {
     lsp_filetypes = lsp_filetypes,

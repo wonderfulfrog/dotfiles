@@ -3,6 +3,7 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 if not cmp then return end
 
 cmp.setup({
+    preselect = true,
     snippet = {
         expand = function(args) vim.fn["vsnip#anonymous"](args.body) end,
     },
@@ -18,13 +19,13 @@ cmp.setup({
         ["<C-f>"] = cmp.mapping.scroll_docs(-4),
         ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-h>"] = cmp.mapping.complete({ reason = cmp.ContextReason.Manual }),
-        ["<C-e>"] = cmp.mapping.close(),
-        ["<C-y>"] = cmp.mapping.confirm({
+        ["<Esc>"] = cmp.mapping.close(),
+        ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Insert,
             select = true, -- use first result if none explicitly selected
         }),
-        -- ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-        -- ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
     }),
     preselect = cmp.PreselectMode.None,
     formatting = {

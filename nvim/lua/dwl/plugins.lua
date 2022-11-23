@@ -23,7 +23,7 @@ packer.startup(function(use)
     -- Essentials
     use({
         "nvim-telescope/telescope.nvim", -- fuzzy find ALL the things
-        -- config = function() require("dwl.plugin-conf.telescope") end,
+        config = function() require("dwl.plugin-conf.telescope") end,
     })
     use({
         "windwp/nvim-ts-autotag", -- auto close html tags
@@ -46,6 +46,24 @@ packer.startup(function(use)
         config = function() require("dwl.plugin-conf.tokyonight") end,
     })
     use("lukas-reineke/indent-blankline.nvim")
+
+    -- Look and feel
+    use({
+        "nvim-lualine/lualine.nvim", -- statusline in lua
+        requires = {
+            "kyazdani42/nvim-web-devicons",
+            opt = true,
+        },
+        config = function() require("dwl.plugin-conf.lualine") end,
+    })
+    -- use({
+    --     "nvim-tree/nvim-web-devicons",
+    --     config = function() require('nvim-web-devicons').setup() end,
+    -- })
+    use({
+        "petertriho/nvim-scrollbar",
+        config = function() require("scrollbar").setup() end,
+    })
 
     -- LSP & Treesitter
     use("neovim/nvim-lspconfig") -- basic configurations for LSP client
