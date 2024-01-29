@@ -1,10 +1,13 @@
 [user]
-	email = devinwl@users.noreply.github.com
-	name = Devin Lumley
+  email = wonderfulfrog@users.noreply.github.com
+  name = Devin Haska
 [core]
-	editor = nvim
-	excludesfile = /Users/devin/.gitignore
+  editor = nvim
+  excludesfile = /Users/devin/.gitignore
 [init]
-	defaultBranch = main
-[pull]
-	ff = only
+  defaultBranch = main
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
