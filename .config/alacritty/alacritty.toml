@@ -1,0 +1,32 @@
+live_config_reload = true
+
+import = [
+    "~/.config/alacritty/themes/tokyonight_storm.toml"
+]
+
+[window]
+decorations = "buttonless"
+padding = { x = 8 }
+dynamic_padding = true
+opacity = 0.97
+blur = true
+
+# test
+[font]
+size = 20.0
+offset = { y = 8 }
+builtin_box_drawing = true
+glyph_offset = { y = 4 }
+
+[font.normal]
+family = "OperatorMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+style = "Medium"
+
+[font.italic]
+style = "Italic"
+
+[font.bold_italic]
+style = "Medium Italic"
