@@ -10,3 +10,8 @@ I use [Tokyo Night][tn] as my theme wherever possible, and [Operator Mono][om] a
 [om]: https://www.typography.com/blog/introducing-operator
 [nf]: https://github.com/ryanoasis/nerd-fonts
 [patch]: https://github.com/ryanoasis/nerd-fonts#option-8-patch-your-own-font
+
+## Inspiration
+
+- `tmux`: https://www.youtube.com/watch?v=DzNmUNvnB04
+- `zsh`: https://www.youtube.com/watch?v=ud7YxC33Z3w
