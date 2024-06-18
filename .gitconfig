@@ -6,7 +6,6 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMsHM+4BN+DKbEW3toSbQh60k3b5qYQOE5bo/6gIJ7Y1
 [core]
   editor = nvim
-  excludesfile = ~/.gitignore
 [commit]
   gpgsign = true
 [init]
