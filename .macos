@@ -31,10 +31,12 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
-defaults write com.apple.dock wvous-tl-corner -int 2
-defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tr-corner -int 4 # Show desktop
 defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 2 # Mission Control
+defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.Terminal ShowLineMarks -int 0
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
