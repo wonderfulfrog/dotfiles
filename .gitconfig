@@ -1,13 +1,8 @@
-[gpg]
-  format = ssh
 [user]
   email = 2636402+wonderfulfrog@users.noreply.github.com
   name = Devin Haska
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMsHM+4BN+DKbEW3toSbQh60k3b5qYQOE5bo/6gIJ7Y1
 [core]
   editor = nvim
-[commit]
-  gpgsign = true
 [init]
   defaultBranch = main
 [include]
