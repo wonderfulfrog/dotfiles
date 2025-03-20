@@ -12,6 +12,9 @@ $rules = [
     'no_leading_import_slash' => false,
     'not_operator_with_space' => false,
     'not_operator_with_successor_space' => false,
+    'constant_case' => [
+        'case' => 'upper'
+    ],
 ];
 
 $finder = (new PhpCsFixer\Finder())
